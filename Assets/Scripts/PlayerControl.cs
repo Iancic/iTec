@@ -17,17 +17,6 @@ public class PlayerControl : MonoBehaviour
     private Animator anim;
     private SpriteRenderer theSR;
 
-    public float knockBackLength, knockBackForce;
-    private float knockBackCounter;
-
-    public float bounceForce;
-
-    public bool stopInput;
-
-    private void Awake()
-    {
-        instance = this;
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +41,7 @@ public class PlayerControl : MonoBehaviour
                     if (isGrounded)
                     {
                         theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
-                        AudioManager.instance.PlaySFX(10);
+                        
                     }
                     else
                     {
@@ -60,7 +49,7 @@ public class PlayerControl : MonoBehaviour
                         {
                             theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
                             canDoubleJump = false;
-                            AudioManager.instance.PlaySFX(10);
+                            
                         }
                     }
                 }

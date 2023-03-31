@@ -8,7 +8,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerHealthController.instance.DealDamage();
+            HealthController.instance.DealDamage();
         }
     }
 }
