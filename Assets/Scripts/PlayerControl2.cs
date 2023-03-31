@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
+public class PlayerControl2 : MonoBehaviour
 {
     public float moveSpeed;
     public Rigidbody2D theRB;
@@ -27,7 +27,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal_1"), theRB.velocity.y);
+        theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal_2"), theRB.velocity.y);
 
                 isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
 
@@ -36,7 +36,7 @@ public class PlayerControl : MonoBehaviour
                     canDoubleJump = true;
                 }
 
-                if (Input.GetButtonDown("Jump_1"))
+                if (Input.GetButtonDown("Jump_2"))
                 {
                     if (isGrounded)
                     {
