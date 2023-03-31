@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
 
     private bool isGrounded;
-    public Transform groundCheckPoint;
+    public Transform groundCheckPoint, transformP2;
+    private float distance_x;
     public LayerMask whatIsGround;
 
     private bool canDoubleJump;
@@ -17,16 +18,15 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private SpriteRenderer theSR;
 
-    // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         theSR = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+
         theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal_1"), theRB.velocity.y);
 
                 isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
