@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
 
     private bool canDoubleJump;
 
-    private Animator anim;
+    public Animator anim;
+    public bool isAttacking = false;
     public SpriteRenderer theSR;
 
     public float knockBackLength, knockBackForce;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
         if (!PauseMenu.instance.paused)
     {   
         if (knockBackCounter <= 0){
+        Attack();
         theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal_1"), theRB.velocity.y);
 
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
@@ -85,13 +87,22 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button2) && isGrounded)
-           anim.Play("Player1_attack");
+        //if (Input.GetKeyDown(KeyCode.Joystick1Button2) && isGrounded)
+           //anim.Play("Player1_attack");
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button2) && !isGrounded)
-           anim.Play("Player1_kick");
+        //if (Input.GetKeyDown(KeyCode.Joystick1Button2) && !isGrounded)
+           //anim.Play("Player1_kick");
     }
     }
+
+    public void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Joystick1Button2) && !isAttacking)
+        {
+            isAttacking = true;
+        }
+    }
+
     public void knock(){
         knockBackCounter = knockBackLength;
         theRB.velocity = new Vector2(0f, knockBackForce);
