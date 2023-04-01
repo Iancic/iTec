@@ -16,7 +16,7 @@ public class PlayerController2 : MonoBehaviour
     private bool canDoubleJump;
 
     private Animator anim;
-    private SpriteRenderer theSR;
+    public SpriteRenderer theSR;
 
     public float knockBackLength, knockBackForce;
     private float knockBackCounter;
@@ -75,13 +75,13 @@ public class PlayerController2 : MonoBehaviour
                 }
         } else {
             knockBackCounter -= Time.deltaTime;
-            if (!theSR.flipX)
-            {
-                theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
-            }
-            if (theSR.flipX)
+            if (PlayerController.instance.theSR.flipX == false)
             {
                 theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
+            }
+            else
+            {
+                theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
             }
         }
         anim.SetBool("isGrounded", isGrounded);

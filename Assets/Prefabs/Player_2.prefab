@@ -189,8 +189,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  theSR: {fileID: 0}
   knockBackLength: 0.5
-  knockBackForce: 5
+  knockBackForce: 3
 --- !u!114 &1588859263482530438
 MonoBehaviour:
   m_ObjectHideFlags: 0
