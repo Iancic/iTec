@@ -53,6 +53,6 @@ public class HealthController2 : MonoBehaviour
         current_health = 0;
         Audio.instance.PlaySFX(3);
         gameObject.SetActive(false);
-        UIController.instance.UpdateHealthDisplay();
+        UIController2.instance.UpdateHealthDisplay();
     }
 }
