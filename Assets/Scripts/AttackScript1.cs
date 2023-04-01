@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackScript1 : MonoBehaviour
 {
     public Transform player2;
-    public float distance_x;
+    private float distance_x;
 
     void Update()
     {
@@ -15,7 +15,7 @@ public class AttackScript1 : MonoBehaviour
 
         if (Input.GetButtonDown("Fire_1"))
         {
-            if (distance_x < 2)
+            if (distance_x < 1.5f)
             HealthController2.instance.DealDamage2();
         }
     }
