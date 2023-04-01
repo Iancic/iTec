@@ -1572,11 +1572,6 @@ RectTransform:
   m_AnchoredPosition: {x: 764.521, y: 452.60693}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &718597951 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1588859263482530440, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
-  m_PrefabInstance: {fileID: 1588859262535721340}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786172154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,27 +1961,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1588859263482530442, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
   m_PrefabInstance: {fileID: 1588859262535721340}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &946924541
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718597951}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19701016bede0744abd42671abd9ff13, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1080206791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,7 +3531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1588859263482530442, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0319
+      value: -4.74
       objectReference: {fileID: 0}
     - target: {fileID: 1588859263482530442, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3591,14 +3565,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1588859263482530443, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588859263482530443, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.32
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
 --- !u!1001 &3262773466522845287
@@ -3611,10 +3577,6 @@ PrefabInstance:
     - target: {fileID: 3262773465585646537, guid: b4fb6adabda133a40be417357db13319, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3262773465585646537, guid: b4fb6adabda133a40be417357db13319, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3262773465585646546, guid: b4fb6adabda133a40be417357db13319, type: 3}
       propertyPath: player2
@@ -3634,7 +3596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3262773465585646551, guid: b4fb6adabda133a40be417357db13319, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0319
+      value: -4.74
       objectReference: {fileID: 0}
     - target: {fileID: 3262773465585646551, guid: b4fb6adabda133a40be417357db13319, type: 3}
       propertyPath: m_LocalPosition.z

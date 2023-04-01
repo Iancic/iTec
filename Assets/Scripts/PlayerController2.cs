@@ -70,6 +70,12 @@ public class PlayerController2 : MonoBehaviour
                 }
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
+
+        if (Input.GetKeyDown(KeyCode.Joystick2Button2) && isGrounded)
+           anim.Play("Player2_attack");
+
+        if (Input.GetKeyDown(KeyCode.Joystick2Button2) && !isGrounded)
+           anim.Play("Player2_kick");
     }
     }
 }
