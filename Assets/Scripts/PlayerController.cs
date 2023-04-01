@@ -36,12 +36,9 @@ public class PlayerController : MonoBehaviour
     {
         if (!PauseMenu.instance.paused)
     {
+        theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal_1"), theRB.velocity.y);
 
-        if (knockBackCounter <= 0)
-        {
-            theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal_1"), theRB.velocity.y);
-
-            isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
 
                 if (isGrounded)
                 {
@@ -73,19 +70,6 @@ public class PlayerController : MonoBehaviour
                 {
                     theSR.flipX = true;
                 }
-        }
-        else
-        {
-            knockBackCounter -= Time.deltaTime;
-            if (theSR.flipX == false)
-            {
-                theRB.velocity = new Vector2(-knockBackF, theRB.velocity.y);
-            }
-            else if (theSR.flipX == true)
-            {
-                theRB.velocity = new Vector2(knockBackF, theRB.velocity.y);
-            }
-        }
     }
     }
 }
