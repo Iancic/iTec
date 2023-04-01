@@ -47,4 +47,12 @@ public class HealthController2 : MonoBehaviour
         UIController2.instance.UpdateHealthDisplay();
         }
     }
+    
+    public void Fall()
+    {
+        current_health = 0;
+        Audio.instance.PlaySFX(3);
+        gameObject.SetActive(false);
+        UIController.instance.UpdateHealthDisplay();
+    }
 }

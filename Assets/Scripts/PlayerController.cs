@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
 
     private bool isGrounded;
-    public Transform groundCheckPoint, transformP2;
+    public Transform groundCheckPoint, transformP2, PlayerY;
     private float distance_x;
     public LayerMask whatIsGround;
 
@@ -86,6 +86,11 @@ public class PlayerController : MonoBehaviour
         }
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
+
+        if (groundCheckPoint.position.y<-15)
+        {
+            HealthController.instance.Fall();
+        }
 
         //if (Input.GetKeyDown(KeyCode.Joystick1Button2) && isGrounded)
            //anim.Play("Player1_attack");
