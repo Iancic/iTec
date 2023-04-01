@@ -182,13 +182,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ffe1407d33f7db40924fa5f0cfbfb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
+  moveSpeed: 7
   theRB: {fileID: 1588859263482530436}
-  jumpForce: 11
+  jumpForce: 10
   groundCheckPoint: {fileID: 1588859263071912864}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  anim: {fileID: 0}
+  isAttacking: 0
   theSR: {fileID: 0}
   knockBackLength: 0.5
   knockBackForce: 3
