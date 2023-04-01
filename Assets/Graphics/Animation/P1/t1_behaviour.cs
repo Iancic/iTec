@@ -15,7 +15,7 @@ public class t1_behaviour : StateMachineBehaviour
     {
         if (PlayerController.instance.isAttacking)
         {
-            PlayerController.instance.anim.Play("Player1_attack2");
+            PlayerController.instance.anim.Play("Player1_kick");
         }
     }
 

@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f5d31e1dbf7e649937597e78801044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelect: Map1
+  levelSelect: Map2
   pauseScreen: {fileID: 0}
   paused: 0
 --- !u!114 &1020242399
