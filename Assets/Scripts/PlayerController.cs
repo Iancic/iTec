@@ -19,10 +19,6 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private SpriteRenderer theSR;
 
-    public float knockBackX, knockBackF;
-    private float knockBackCounter=1;
-
-    public bool stopInput;
     void Awake(){
         instance = this;
     }
@@ -70,6 +66,8 @@ public class PlayerController : MonoBehaviour
                 {
                     theSR.flipX = true;
                 }
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
     }
     }
 }

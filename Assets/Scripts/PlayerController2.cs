@@ -68,6 +68,8 @@ public class PlayerController2 : MonoBehaviour
                 {
                     theSR.flipX = true;
                 }
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
     }
     }
 }
