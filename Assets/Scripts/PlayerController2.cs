@@ -51,13 +51,14 @@ public class PlayerController2 : MonoBehaviour
                     if (isGrounded)
                     {
                         theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
-                        
+                        Audio.instance.PlaySFX(2);
                     }
                     else
                     {
                         if (canDoubleJump)
                         {
                             theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+                            Audio.instance.PlaySFX(2);
                             canDoubleJump = false;
                             
                         }

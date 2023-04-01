@@ -36,9 +36,11 @@ public class HealthController : MonoBehaviour
         if (current_health <= 0)
         {
             current_health = 0;
+            Audio.instance.PlaySFX(3);
             gameObject.SetActive(false);
         } else
         {
+            Audio.instance.PlaySFX(1);
             invincibleC = invincibleL;
             PlayerController.instance.knock();
         }

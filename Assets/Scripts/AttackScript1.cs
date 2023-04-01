@@ -17,6 +17,7 @@ public class AttackScript1 : MonoBehaviour
 
         if (Input.GetButtonDown("Fire_1"))
         {
+            Audio.instance.PlaySFX(0);
             if (distance_x < 1.5f)
             HealthController2.instance.DealDamage2();
         }
