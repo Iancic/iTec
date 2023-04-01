@@ -171,8 +171,6 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  knockBackX: 0
-  knockBackF: 0
 --- !u!114 &3262773465585646547
 MonoBehaviour:
   m_ObjectHideFlags: 0
