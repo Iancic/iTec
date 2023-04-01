@@ -15,16 +15,16 @@ public class HealthController : MonoBehaviour
         instance = this;
     }
 
+    void Start()
+    {
+        current_health = max_health;
+    }
+
     void Update()
     {
         if (invincibleC > 0)
         {
         invincibleC -= Time.deltaTime;}
-    }
-
-    void Start()
-    {
-        current_health = max_health;
     }
 
     public void DealDamage()
@@ -40,6 +40,7 @@ public class HealthController : MonoBehaviour
         } else
         {
             invincibleC = invincibleL;
+            PlayerController.instance.knock();
         }
         UIController.instance.UpdateHealthDisplay();
         }

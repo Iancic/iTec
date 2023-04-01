@@ -18,6 +18,9 @@ public class PlayerController2 : MonoBehaviour
     private Animator anim;
     private SpriteRenderer theSR;
 
+    public float knockBackLength, knockBackForce;
+    private float knockBackCounter;
+
     void Awake(){
         instance = this;
     }
@@ -33,6 +36,7 @@ public class PlayerController2 : MonoBehaviour
     {
         if (!PauseMenu.instance.paused)
     {
+        if (knockBackCounter <= 0){
         theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal_2"), theRB.velocity.y);
 
                 isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
@@ -68,6 +72,17 @@ public class PlayerController2 : MonoBehaviour
                 {
                     theSR.flipX = true;
                 }
+        } else {
+            knockBackCounter -= Time.deltaTime;
+            if (!theSR.flipX)
+            {
+                theRB.velocity = new Vector2(knockBackForce, theRB.velocity.y);
+            }
+            if (theSR.flipX)
+            {
+                theRB.velocity = new Vector2(-knockBackForce, theRB.velocity.y);
+            }
+        }
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
 
@@ -77,5 +92,9 @@ public class PlayerController2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Joystick2Button2) && !isGrounded)
            anim.Play("Player2_kick");
     }
+    }
+    public void knock(){
+        knockBackCounter = knockBackLength;
+        theRB.velocity = new Vector2(0f, knockBackForce);
     }
 }

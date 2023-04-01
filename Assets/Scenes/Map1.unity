@@ -3547,6 +3547,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1588859263482530437, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
+      propertyPath: knockBackForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588859263482530437, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
+      propertyPath: knockBackLength
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588859263482530438, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
+      propertyPath: invincibleL
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1588859263482530439, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
       propertyPath: player1
       value: 
@@ -3624,6 +3636,14 @@ PrefabInstance:
       propertyPath: transformP2
       value: 
       objectReference: {fileID: 946924534}
+    - target: {fileID: 3262773465585646548, guid: b4fb6adabda133a40be417357db13319, type: 3}
+      propertyPath: knockBackForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3262773465585646548, guid: b4fb6adabda133a40be417357db13319, type: 3}
+      propertyPath: knockBackLength
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3262773465585646551, guid: b4fb6adabda133a40be417357db13319, type: 3}
       propertyPath: m_RootOrder
       value: 7
