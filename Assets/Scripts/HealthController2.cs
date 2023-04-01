@@ -42,7 +42,7 @@ public class HealthController2 : MonoBehaviour
             invincibleC = invincibleL;
             PlayerController2.instance.knock();
         }
-        UIController.instance.UpdateHealthDisplay();
+        UIController2.instance.UpdateHealthDisplay();
         }
     }
 }
