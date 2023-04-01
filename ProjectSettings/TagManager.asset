@@ -42,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Spikes
+  - name: Background
+    uniqueID: 966747149
+    locked: 0
+  - name: World
     uniqueID: 6167229
+    locked: 0
+  - name: Players
+    uniqueID: 4147427179
     locked: 0
