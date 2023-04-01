@@ -9,6 +9,8 @@ public class AttackScript2 : MonoBehaviour
 
     void Update()
     {
+        if (!PauseMenu.instance.paused)
+    {
         distance_x = this.transform.position.x - player1.transform.position.x;
         if (distance_x < 0)
         distance_x = -distance_x;
@@ -18,5 +20,6 @@ public class AttackScript2 : MonoBehaviour
             if (distance_x < 1.5f)
             HealthController.instance.DealDamage();
         }
+    }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController2 : MonoBehaviour
 {
+    public static PlayerController2 instance;
     public float moveSpeed;
     public Rigidbody2D theRB;
     public float jumpForce;
@@ -17,6 +18,10 @@ public class PlayerController2 : MonoBehaviour
     private Animator anim;
     private SpriteRenderer theSR;
 
+    void Awake(){
+        instance = this;
+    }
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -25,6 +30,8 @@ public class PlayerController2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        if (!PauseMenu.instance.paused)
     {
         theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal_2"), theRB.velocity.y);
 
@@ -61,5 +68,6 @@ public class PlayerController2 : MonoBehaviour
                 {
                     theSR.flipX = true;
                 }
+    }
     }
 }

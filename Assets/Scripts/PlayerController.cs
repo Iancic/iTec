@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     public float moveSpeed;
     public Rigidbody2D theRB;
     public float jumpForce;
@@ -19,8 +20,12 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer theSR;
 
     public float knockBackX, knockBackF;
-    private float knockBackCounter;
+    private float knockBackCounter=1;
 
+    public bool stopInput;
+    void Awake(){
+        instance = this;
+    }
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -29,6 +34,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!PauseMenu.instance.paused)
+    {
+
         if (knockBackCounter <= 0)
         {
             theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal_1"), theRB.velocity.y);
@@ -78,5 +86,6 @@ public class PlayerController : MonoBehaviour
                 theRB.velocity = new Vector2(knockBackF, theRB.velocity.y);
             }
         }
+    }
     }
 }

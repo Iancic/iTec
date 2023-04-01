@@ -26,6 +26,7 @@ public class MenuButtons : MonoBehaviour
 
     public void Play(){
         SceneManager.LoadScene(levelSelect);
+        Time.timeScale = 1f;
     }
 
     public void Quit(){
