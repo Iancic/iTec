@@ -812,7 +812,7 @@ AudioSource:
   m_GameObject: {fileID: 255793104}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3291030961401111633, guid: 574778f8df4b08b4bb34b5d9708b2cd4, type: 2}
   m_audioClip: {fileID: 8300000, guid: 208acf77d48b95a47a1da554dfb7a882, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1024,7 +1024,7 @@ AudioSource:
   m_GameObject: {fileID: 407123610}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3291030961401111633, guid: 574778f8df4b08b4bb34b5d9708b2cd4, type: 2}
   m_audioClip: {fileID: 8300000, guid: 21156b5f47a934841bed00839b53fb82, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1431,7 +1431,7 @@ AudioSource:
   m_GameObject: {fileID: 451664775}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3291030961401111633, guid: 574778f8df4b08b4bb34b5d9708b2cd4, type: 2}
   m_audioClip: {fileID: 8300000, guid: ba3e961b9da58604e8d289f7b73da31c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2487,13 +2487,14 @@ GameObject:
   m_Component:
   - component: {fileID: 930353846}
   - component: {fileID: 930353845}
+  - component: {fileID: 930353847}
   m_Layer: 0
   m_Name: Spikes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &930353845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2561,6 +2562,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &930353847
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930353844}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!4 &946924534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1588859263482530442, guid: f3b53fdba67046642899792f6f02a1df, type: 3}
@@ -3425,6 +3452,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1878798093}
   - component: {fileID: 1878798092}
+  - component: {fileID: 1878798094}
+  - component: {fileID: 1878798096}
+  - component: {fileID: 1878798095}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -3499,6 +3529,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1878798094
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878798091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.066671625}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.18665674}
+  m_EdgeRadius: 0
+--- !u!114 &1878798095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878798091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9beab8b74538fc4f8139882c53f77e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1878798096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878798091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce524843f2bc1be4baf7848254e55e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1885190265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,7 +3898,7 @@ AudioSource:
   m_GameObject: {fileID: 1931918810}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3291030961401111633, guid: 574778f8df4b08b4bb34b5d9708b2cd4, type: 2}
   m_audioClip: {fileID: 8300000, guid: d661a67c8cd3018408b5fdcd61093a33, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

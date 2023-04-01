@@ -15,7 +15,8 @@ public class PlayerController2 : MonoBehaviour
 
     private bool canDoubleJump;
 
-    private Animator anim;
+    public Animator anim;
+    public bool isAttacking = false;
     public SpriteRenderer theSR;
 
     public float knockBackLength, knockBackForce;
@@ -37,6 +38,7 @@ public class PlayerController2 : MonoBehaviour
         if (!PauseMenu.instance.paused)
     {
         if (knockBackCounter <= 0){
+        Attack();
         theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal_2"), theRB.velocity.y);
 
                 isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
@@ -99,6 +101,15 @@ public class PlayerController2 : MonoBehaviour
         }
     }
     }
+
+    public void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Joystick1Button2) && !isAttacking)
+        {
+            isAttacking = true;
+        }
+    }
+
     public void knock(){
         knockBackCounter = knockBackLength;
         theRB.velocity = new Vector2(0f, knockBackForce);
