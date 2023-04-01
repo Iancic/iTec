@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public PlayerController instance;
     public float moveSpeed;
     public Rigidbody2D theRB;
     public float jumpForce;
@@ -18,6 +19,14 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private SpriteRenderer theSR;
 
+    public float knockBackX, knockBackF;
+    private float knockBackCounter;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -26,10 +35,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (knockBackCounter <= 0)
+        {
+            theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal_1"), theRB.velocity.y);
 
-        theRB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal_1"), theRB.velocity.y);
-
-                isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+            isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
 
                 if (isGrounded)
                 {
@@ -48,19 +58,37 @@ public class PlayerController : MonoBehaviour
                         if (canDoubleJump)
                         {
                             theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
-                            canDoubleJump = false;
-                            
+                            canDoubleJump = false;    
                         }
                     }
                 }
 
                 if (theRB.velocity.x < 0)
                 {
-                    theSR.flipX = true;
+                    theSR.flipX = false;
                 }
                 else if (theRB.velocity.x > 0)
                 {
-                    theSR.flipX = false;
+                    theSR.flipX = true;
                 }
+        }
+        else
+        {
+            knockBackCounter -= Time.deltaTime;
+            if (theSR.flipX == false)
+            {
+                theRB.velocity = new Vector2(-knockBackF, theRB.velocity.y);
+            }
+            else if (theSR.flipX == true)
+            {
+                theRB.velocity = new Vector2(knockBackF, theRB.velocity.y);
+            }
+        }
+    }
+
+    public void knockBack()
+    {
+        knockBackCounter = knockBackX;
+        theRB.velocity = new Vector2(0f, knockBackF);
     }
 }

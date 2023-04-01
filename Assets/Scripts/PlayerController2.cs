@@ -56,11 +56,11 @@ public class PlayerController2 : MonoBehaviour
 
                 if (theRB.velocity.x < 0)
                 {
-                    theSR.flipX = true;
+                    theSR.flipX = false;
                 }
                 else if (theRB.velocity.x > 0)
                 {
-                    theSR.flipX = false;
+                    theSR.flipX = true;
                 }
     }
 }
