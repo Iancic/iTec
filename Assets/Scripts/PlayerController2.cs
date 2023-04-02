@@ -104,12 +104,6 @@ public class PlayerController2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Joystick2Button2) && !isAttacking)
         {
             isAttacking = true;
-            Debug.Log("controller");
-        }
-        else if (Input.GetKeyDown(KeyCode.K) && !isAttacking)
-        {
-            isAttacking = true;
-            Debug.Log("keyboard");
         }
     }
 

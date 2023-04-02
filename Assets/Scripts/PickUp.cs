@@ -29,6 +29,7 @@ public class PickUp : MonoBehaviour
                 {    
                     HealthController.instance.HealPlayer();
                     isCollected = true;
+                    Audio.instance.PlaySFX(4);
                     Destroy(gameObject);
                 }
             }
@@ -37,6 +38,7 @@ public class PickUp : MonoBehaviour
             {
                 SnowTrigger.instance.SnowsStart();
                 isCollected = true;
+                Audio.instance.PlaySFX(4);
                 Destroy(gameObject);
             }
         }

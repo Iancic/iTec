@@ -1217,8 +1217,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283355075}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.77, y: 4.18, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 1.77, y: 3.8477, z: 0}
+  m_LocalScale: {x: 1.2616, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1510346851}
@@ -5505,7 +5505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270112487}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.745, y: 7.17, z: 0}
+  m_LocalPosition: {x: 3.68, y: 7.17, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5888,7 +5888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSelect: 
-  pauseScreen: {fileID: 0}
+  pauseScreen: {fileID: 1927771426}
   paused: 0
 --- !u!114 &1293634097
 MonoBehaviour:
@@ -8456,6 +8456,11 @@ PrefabInstance:
 --- !u!224 &1927771425 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 818846756269788360, guid: 190f78dbe39a49d468458eae72ec531d, type: 3}
+  m_PrefabInstance: {fileID: 1927771424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1927771426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 818846756269788343, guid: 190f78dbe39a49d468458eae72ec531d, type: 3}
   m_PrefabInstance: {fileID: 1927771424}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1953548193

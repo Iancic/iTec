@@ -21,7 +21,7 @@ public class PickUp2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player2") && isCollected)
+        if(other.CompareTag("Player2") && !isCollected)
         {
             if(isHeal)
             {
@@ -29,6 +29,7 @@ public class PickUp2 : MonoBehaviour
                 {    
                     HealthController2.instance.HealPlayer();
                     isCollected = true;
+                    Audio.instance.PlaySFX(4);
                     Destroy(gameObject);
                 }
             }
@@ -37,6 +38,7 @@ public class PickUp2 : MonoBehaviour
             {
                 SnowTrigger.instance.SnowsStart();
                 isCollected = true;
+                Audio.instance.PlaySFX(4);
                 Destroy(gameObject);
             }
         }
