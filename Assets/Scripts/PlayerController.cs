@@ -103,6 +103,10 @@ public class PlayerController : MonoBehaviour
         {
             isAttacking = true;
         }
+        else if (Input.GetKeyDown(KeyCode.G) && !isAttacking)
+        {
+            isAttacking = true;
+        }
     }
 
     public void knock(){
