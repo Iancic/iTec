@@ -39,6 +39,9 @@ public class PlayerController2 : MonoBehaviour
     {
         if (knockBackCounter <= 0){
         Attack();
+        if (Input.GetAxis("Horizontal_2") == 0)
+        theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal_Arrows"), theRB.velocity.y);
+        else
         theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal_2"), theRB.velocity.y);
 
                 isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
@@ -48,7 +51,7 @@ public class PlayerController2 : MonoBehaviour
                     canDoubleJump = true;
                 }
 
-                if (Input.GetButtonDown("Jump_2"))
+                if (Input.GetButtonDown("Jump_2") || Input.GetButtonDown("Jump_L"))
                 {
                     if (isGrounded)
                     {
@@ -88,12 +91,6 @@ public class PlayerController2 : MonoBehaviour
         }
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("moveSpeed", Mathf.Abs(theRB.velocity.x));
-
-        //if (Input.GetKeyDown(KeyCode.Joystick2Button2) && isGrounded)
-           //anim.Play("Player2_attack");
-
-        //if (Input.GetKeyDown(KeyCode.Joystick2Button2) && !isGrounded)
-           //anim.Play("Player2_kick");
 
         if (groundCheckPoint.position.y<-15)
         {
